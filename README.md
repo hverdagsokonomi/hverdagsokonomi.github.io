@@ -65,7 +65,7 @@ Oppdater disse stedene når ekte domene er klart:
 
 Hvis du bruker eget domene på GitHub Pages, legg også til en `CNAME`-fil med domenet.
 
-Placeholder-URL-ene bruker `https://example.com/hverdagsokonomi/` for å speile en GitHub Pages project site. Dersom siden publiseres på et eget rotdomene, kan du bytte dette til for eksempel `https://dittdomene.no/`.
+Standard publisert URL er `https://hverdagsokonomi.github.io/`. Dersom siden senere publiseres på et eget domene, kan du bytte dette til for eksempel `https://dittdomene.no/`.
 
 ## Oppdatere sitemap
 

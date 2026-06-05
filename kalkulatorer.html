@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kalkulatorer for hverdagsøkonomi | Hverdagsøkonomi</title>
   <meta name="description" content="Gratis kalkulatorer for budsjett, buffer, strøm, rente, abonnementer, forsikring, egenandel, bilkostnader, matbudsjett og feriebudsjett.">
-  <link rel="canonical" href="https://example.com/hverdagsokonomi/kalkulatorer.html">
+  <link rel="canonical" href="https://hverdagsokonomi.github.io/kalkulatorer.html">
   <meta property="og:title" content="Kalkulatorer for hverdagsøkonomi">
   <meta property="og:description" content="Regn lokalt i nettleseren. Tallene dine sendes ikke til en server.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/hverdagsokonomi/kalkulatorer.html">
-  <meta property="og:image" content="https://example.com/hverdagsokonomi/assets/img/hverdagsokonomi-logo.svg">
+  <meta property="og:url" content="https://hverdagsokonomi.github.io/kalkulatorer.html">
+  <meta property="og:image" content="https://hverdagsokonomi.github.io/assets/img/hverdagsokonomi-logo.svg">
   <meta property="og:site_name" content="Hverdagsøkonomi">
   <script type="application/ld+json">
   {
@@ -92,6 +92,10 @@
       <div class="container">
         <h1>Kalkulatorer</h1>
         <p class="lead">Alle beregninger skjer lokalt i nettleseren. Hverdagsøkonomi lagrer ikke tallene du skriver inn og sender dem ikke til en server.</p>
+        <div class="calculator-context">
+          <h2>Tolk resultatene riktig</h2>
+          <p>Kalkulatorene bruker forenklede beregninger og grove typiske nivåer. Lokale priser, avtaler, familie, bosted, boligtype og livssituasjon betyr mye. Bruk resultatene som et startpunkt for egen vurdering, ikke som en fasit.</p>
+        </div>
         <ul class="pill-list" aria-label="Hopp til kalkulator">
           <li><a href="#budsjett">Budsjett</a></li>
           <li><a href="#buffer">Buffer</a></li>
@@ -113,6 +117,14 @@
           <section class="calculator" id="budsjett" aria-labelledby="budsjett-title">
             <h2 id="budsjett-title">Budsjettkalkulator</h2>
             <p>Fyll inn omtrentlige månedstall for å se totalen, disponibelt beløp og sparingsgrad.</p>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Et budsjett kan se svært forskjellig ut fra husholdning til husholdning. Kalkulatoren sammenligner sparingsgrad og utgiftsgrad med grove intervaller, ikke en fasit.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om budsjett">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/lage-manedsbudsjett.html">Slik lager du et enkelt månedsbudsjett</a></li><li><a href="artikler/budsjett-for-en-person.html">Budsjett for én person</a></li><li><a href="artikler/budsjett-for-familie.html">Budsjett for familie</a></li></ul>
+            </div>
             <form id="budget-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="income">Nettoinntekt per måned</label><input id="income" name="income" type="number" min="0" step="1" inputmode="decimal" aria-describedby="income-error"><span class="field-error" id="income-error" aria-live="polite"></span></div>
@@ -135,6 +147,14 @@
 
           <section class="calculator" id="buffer" aria-labelledby="buffer-title">
             <h2 id="buffer-title">Bufferkalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Buffer vurderes ofte i antall måneder med faste utgifter. Riktig nivå avhenger blant annet av inntektssikkerhet, bolig, bil, familie og andre forpliktelser.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om buffer">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/hvor-stor-buffer.html">Hvor stor buffer bør du ha?</a></li><li><a href="artikler/lage-manedsbudsjett.html">Slik lager du et enkelt månedsbudsjett</a></li></ul>
+            </div>
             <form id="buffer-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="fixed">Månedlige faste utgifter</label><input id="fixed" name="fixed" type="number" min="0" step="1" inputmode="decimal" aria-describedby="fixed-error"><span class="field-error" id="fixed-error" aria-live="polite"></span></div>
@@ -149,8 +169,17 @@
 
           <section class="calculator" id="strom" aria-labelledby="strom-title">
             <h2 id="strom-title">Strømkostnadskalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Strømforbruk varierer mye med boligtype, boligstørrelse, oppvarming, isolasjon, antall personer og årstid. Velg boligtype for en grovere sammenligning.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om strom">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/normalt-stromforbruk.html">Hva er normalt strømforbruk per måned?</a></li><li><a href="artikler/stromforbruk-leilighet.html">Normalt strømforbruk for leilighet</a></li><li><a href="artikler/redusere-stromregning.html">Slik kan du redusere strømregningen</a></li></ul>
+            </div>
             <form id="electricity-form" novalidate>
               <div class="calculator-grid">
+                <div class="field"><label for="homeType">Boligtype</label><select id="homeType" name="homeType"><option value="apartment">Leilighet</option><option value="rowhouse">Rekkehus/tomannsbolig</option><option value="house">Enebolig</option><option value="cabin">Hytte/fritidsbolig</option></select></div>
                 <div class="field"><label for="kwh">Forbruk i kWh per måned</label><input id="kwh" name="kwh" type="number" min="0" step="1" inputmode="decimal" aria-describedby="kwh-error"><span class="field-error" id="kwh-error" aria-live="polite"></span></div>
                 <div class="field"><label for="price">Strømpris i øre/kWh</label><input id="price" name="price" type="number" min="0" step="0.01" inputmode="decimal" aria-describedby="price-error"><span class="field-error" id="price-error" aria-live="polite"></span></div>
                 <div class="field"><label for="grid">Nettleie per måned</label><input id="grid" name="grid" type="number" min="0" step="1" inputmode="decimal" aria-describedby="grid-error"><span class="field-error" id="grid-error" aria-live="polite"></span></div>
@@ -164,12 +193,21 @@
 
           <section class="calculator" id="rente" aria-labelledby="rente-title">
             <h2 id="rente-title">Rentekostnadskalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Lånebelastning vurderes ofte mot inntekt og total rentekostnad. Nettoinntekt er valgfritt, men gjør sammenligningen mer nyttig.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om rente">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/lage-manedsbudsjett.html">Slik lager du et enkelt månedsbudsjett</a></li><li><a href="artikler/hvor-stor-buffer.html">Hvor stor buffer bør du ha?</a></li></ul>
+            </div>
             <form id="interest-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="principal">Lånebeløp</label><input id="principal" name="principal" type="number" min="0" step="1" inputmode="decimal" aria-describedby="principal-error"><span class="field-error" id="principal-error" aria-live="polite"></span></div>
                 <div class="field"><label for="rate">Nominell rente i prosent</label><input id="rate" name="rate" type="number" min="0" step="0.01" inputmode="decimal" aria-describedby="rate-error"><span class="field-error" id="rate-error" aria-live="polite"></span></div>
                 <div class="field"><label for="years">Nedbetalingstid i år</label><input id="years" name="years" type="number" min="1" step="1" inputmode="numeric" aria-describedby="years-error"><span class="field-error" id="years-error" aria-live="polite"></span></div>
                 <div class="field"><label for="fee">Termingebyr per måned</label><input id="fee" name="fee" type="number" min="0" step="1" inputmode="decimal" aria-describedby="fee-error"><span class="field-error" id="fee-error" aria-live="polite"></span></div>
+                <div class="field"><label for="loanIncome">Nettoinntekt per måned (valgfritt)</label><input id="loanIncome" name="income" type="number" min="0" step="1" inputmode="decimal" aria-describedby="loanIncome-error"><span class="field-error" id="loanIncome-error" aria-live="polite"></span></div>
               </div>
               <div class="button-row"><button class="button" type="submit">Beregn rente</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
               <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
@@ -179,6 +217,14 @@
 
           <section class="calculator" id="abonnement" aria-labelledby="abonnement-title">
             <h2 id="abonnement-title">Abonnementskalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Abonnementer er ofte små hver for seg, men kan bli en merkbar årlig kostnad samlet. Kalkulatoren sammenligner både antall og total månedskostnad.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om abonnement">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/abonnementer.html">Abonnementer du bør gå gjennom</a></li><li><a href="artikler/smakjop.html">Slik får du oversikt over småkjøp</a></li><li><a href="artikler/lage-manedsbudsjett.html">Slik lager du et enkelt månedsbudsjett</a></li></ul>
+            </div>
             <form id="subscription-form" novalidate>
               <div data-subscription-rows>
                 <div class="subscription-row" data-subscription-row>
@@ -206,6 +252,14 @@
           <section class="calculator" id="forsikringsbehov" aria-labelledby="forsikringsbehov-title">
             <h2 id="forsikringsbehov-title">Forsikringsbehov-kalkulator</h2>
             <p>Dette er en generell oversikt, ikke en anbefaling.</p>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Forsikringsbehov varierer mye med bolig, bil, familie, gjeld, reisevaner og økonomisk avhengighet. Resultatet viser mulige temaer å undersøke, ikke en anbefalt pakke.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om forsikringsbehov">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/hvilke-forsikringer-trenger-jeg.html">Hvilke forsikringer kan være relevante?</a></li><li><a href="artikler/sammenligne-forsikringer.html">Slik sammenligner du forsikringer</a></li><li><a href="artikler/hva-dekker-innboforsikring.html">Hva dekker innboforsikring vanligvis?</a></li></ul>
+            </div>
             <form id="insurance-needs-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="age">Alder</label><input id="age" name="age" type="number" min="0" max="120" step="1" inputmode="numeric" aria-describedby="age-error"><span class="field-error" id="age-error" aria-live="polite"></span></div>
@@ -226,6 +280,14 @@
 
           <section class="calculator" id="egenandel" aria-labelledby="egenandel-title">
             <h2 id="egenandel-title">Egenandel-kalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Om det lønner seg å melde en skade avhenger av skadebeløp, egenandel, mulig bonustap, fremtidig premie og vilkår hos forsikringsselskapet.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om egenandel">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/hva-er-egenandel.html">Hva er egenandel på forsikring?</a></li><li><a href="artikler/sammenligne-forsikringer.html">Slik sammenligner du forsikringer</a></li></ul>
+            </div>
             <form id="deductible-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="damage">Skadebeløp</label><input id="damage" name="damage" type="number" min="0" step="1" inputmode="decimal" aria-describedby="damage-error"><span class="field-error" id="damage-error" aria-live="polite"></span></div>
@@ -240,6 +302,14 @@
 
           <section class="calculator" id="bilkostnad" aria-labelledby="bilkostnad-title">
             <h2 id="bilkostnad-title">Bilkostnadskalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Bilkostnader varierer mye med biltype, lån eller leasing, kjørelengde, forsikring, service og verdifall. Intervallene er grove hverdagsnivåer.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om bilkostnad">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/hva-koster-bil.html">Hva koster det å ha bil i måneden?</a></li><li><a href="artikler/verdifall-bil.html">Verdifall på bil forklart enkelt</a></li></ul>
+            </div>
             <form id="car-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="car-loan">Lån eller leasing per måned</label><input id="car-loan" name="loan" type="number" min="0" step="1" inputmode="decimal" aria-describedby="car-loan-error"><span class="field-error" id="car-loan-error" aria-live="polite"></span></div>
@@ -259,6 +329,14 @@
 
           <section class="calculator" id="matbudsjett" aria-labelledby="matbudsjett-title">
             <h2 id="matbudsjett-title">Matbudsjett-kalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Matkostnader varierer mye. Som grove eksempelverdier bruker kalkulatoren 3500-5000 kr per voksen og 2000-3500 kr per barn per måned for mat hjemme. Restaurant og takeaway vises separat.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om matbudsjett">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/vanlig-matbudsjett.html">Hva er vanlig matbudsjett per måned?</a></li><li><a href="artikler/matbudsjett-en-voksen.html">Matbudsjett for én voksen</a></li><li><a href="artikler/matbudsjett-familie.html">Matbudsjett for familie med barn</a></li><li><a href="artikler/redusere-matbudsjett.html">Slik kan du redusere matbudsjettet</a></li></ul>
+            </div>
             <form id="food-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="adults">Antall voksne</label><input id="adults" name="adults" type="number" min="0" step="1" inputmode="numeric" aria-describedby="adults-error"><span class="field-error" id="adults-error" aria-live="polite"></span></div>
@@ -275,6 +353,14 @@
 
           <section class="calculator" id="feriebudsjett" aria-labelledby="feriebudsjett-title">
             <h2 id="feriebudsjett-title">Feriebudsjett-kalkulator</h2>
+            <div class="calculator-context">
+              <h3>Hva er vanlig?</h3>
+              <p>Feriekostnader varierer mye med reisemål, sesong, reisemåte og aktivitetsnivå. Nettoinntekt er valgfritt, men kan vise hvor tung månedlig sparing blir.</p>
+            </div>
+            <div class="calculator-read-more" aria-label="Les mer om feriebudsjett">
+              <p><strong>Les mer:</strong></p>
+              <ul class="pill-list"><li><a href="artikler/feriebudsjett.html">Slik lager du et realistisk feriebudsjett</a></li><li><a href="artikler/smakjop.html">Slik får du oversikt over småkjøp</a></li></ul>
+            </div>
             <form id="holiday-form" novalidate>
               <div class="calculator-grid">
                 <div class="field"><label for="holiday-transport">Transport</label><input id="holiday-transport" name="transport" type="number" min="0" step="1" inputmode="decimal" aria-describedby="holiday-transport-error"><span class="field-error" id="holiday-transport-error" aria-live="polite"></span></div>
@@ -285,6 +371,7 @@
                 <div class="field"><label for="shopping">Shopping/annet</label><input id="shopping" name="shopping" type="number" min="0" step="1" inputmode="decimal" aria-describedby="shopping-error"><span class="field-error" id="shopping-error" aria-live="polite"></span></div>
                 <div class="field"><label for="people">Antall personer</label><input id="people" name="people" type="number" min="1" step="1" inputmode="numeric" aria-describedby="people-error"><span class="field-error" id="people-error" aria-live="polite"></span></div>
                 <div class="field"><label for="holiday-months">Måneder til reisen</label><input id="holiday-months" name="months" type="number" min="1" step="1" inputmode="numeric" aria-describedby="holiday-months-error"><span class="field-error" id="holiday-months-error" aria-live="polite"></span></div>
+                <div class="field"><label for="holiday-income">Nettoinntekt per måned (valgfritt)</label><input id="holiday-income" name="income" type="number" min="0" step="1" inputmode="decimal" aria-describedby="holiday-income-error"><span class="field-error" id="holiday-income-error" aria-live="polite"></span></div>
               </div>
               <div class="button-row"><button class="button" type="submit">Beregn feriebudsjett</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
               <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
