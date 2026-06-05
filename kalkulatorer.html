@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulatorer for hverdagsøkonomi | Hverdagsøkonomi</title>
+  <meta name="description" content="Gratis kalkulatorer for budsjett, buffer, strøm, rente, abonnementer, forsikring, egenandel, bilkostnader, matbudsjett og feriebudsjett.">
+  <link rel="canonical" href="https://example.com/hverdagsokonomi/kalkulatorer.html">
+  <meta property="og:title" content="Kalkulatorer for hverdagsøkonomi">
+  <meta property="og:description" content="Regn lokalt i nettleseren. Tallene dine sendes ikke til en server.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/hverdagsokonomi/kalkulatorer.html">
+  <meta property="og:image" content="https://example.com/hverdagsokonomi/assets/img/hverdagsokonomi-logo.svg">
+  <meta property="og:site_name" content="Hverdagsøkonomi">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Er kalkulatorene gratis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, kalkulatorene er gratis å bruke."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Lagres tallene jeg skriver inn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nei. Beregningene skjer lokalt i nettleseren, og tallene sendes ikke til en server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Er dette personlig rådgivning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nei. Resultatene er generelle og forenklede estimater."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvor nøyaktige er kalkulatorene?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De gir en forenklet beregning basert på tallene du legger inn. Faktiske priser, gebyrer og vilkår kan avvike."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jeg bruke kalkulatorene anonymt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Du trenger ikke konto eller innlogging."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Hverdagsøkonomi forsiden"><img src="assets/img/hverdagsokonomi-logo.svg" width="198" height="37" alt="Hverdagsøkonomi"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>Meny</button>
+      <nav class="site-nav" id="site-nav" aria-label="Hovedmeny" data-site-nav>
+        <ul>
+          <li><a href="kalkulatorer.html">Kalkulatorer</a></li>
+          <li><a href="forsikring.html">Forsikring</a></li>
+          <li><a href="privatokonomi.html">Privatøkonomi</a></li>
+          <li><a href="guider.html">Guider</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brødsmulesti">
+        <ol><li><a href="index.html">Forside</a></li><li>Kalkulatorer</li></ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <h1>Kalkulatorer</h1>
+        <p class="lead">Alle beregninger skjer lokalt i nettleseren. Hverdagsøkonomi lagrer ikke tallene du skriver inn og sender dem ikke til en server.</p>
+        <ul class="pill-list" aria-label="Hopp til kalkulator">
+          <li><a href="#budsjett">Budsjett</a></li>
+          <li><a href="#buffer">Buffer</a></li>
+          <li><a href="#strom">Strøm</a></li>
+          <li><a href="#rente">Rente</a></li>
+          <li><a href="#abonnement">Abonnement</a></li>
+          <li><a href="#forsikringsbehov">Forsikringsbehov</a></li>
+          <li><a href="#egenandel">Egenandel</a></li>
+          <li><a href="#bilkostnad">Bilkostnad</a></li>
+          <li><a href="#matbudsjett">Matbudsjett</a></li>
+          <li><a href="#feriebudsjett">Feriebudsjett</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container content-layout">
+        <div class="content-main">
+          <section class="calculator" id="budsjett" aria-labelledby="budsjett-title">
+            <h2 id="budsjett-title">Budsjettkalkulator</h2>
+            <p>Fyll inn omtrentlige månedstall for å se totalen, disponibelt beløp og sparingsgrad.</p>
+            <form id="budget-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="income">Nettoinntekt per måned</label><input id="income" name="income" type="number" min="0" step="1" inputmode="decimal" aria-describedby="income-error"><span class="field-error" id="income-error" aria-live="polite"></span></div>
+                <div class="field"><label for="housing">Boligkostnader</label><input id="housing" name="housing" type="number" min="0" step="1" inputmode="decimal" aria-describedby="housing-error"><span class="field-error" id="housing-error" aria-live="polite"></span></div>
+                <div class="field"><label for="food">Mat og dagligvarer</label><input id="food" name="food" type="number" min="0" step="1" inputmode="decimal" aria-describedby="food-error"><span class="field-error" id="food-error" aria-live="polite"></span></div>
+                <div class="field"><label for="transport">Transport</label><input id="transport" name="transport" type="number" min="0" step="1" inputmode="decimal" aria-describedby="transport-error"><span class="field-error" id="transport-error" aria-live="polite"></span></div>
+                <div class="field"><label for="insurance">Forsikringer</label><input id="insurance" name="insurance" type="number" min="0" step="1" inputmode="decimal" aria-describedby="insurance-error"><span class="field-error" id="insurance-error" aria-live="polite"></span></div>
+                <div class="field"><label for="electricity">Strøm</label><input id="electricity" name="electricity" type="number" min="0" step="1" inputmode="decimal" aria-describedby="electricity-error"><span class="field-error" id="electricity-error" aria-live="polite"></span></div>
+                <div class="field"><label for="phone">Telefon og internett</label><input id="phone" name="phone" type="number" min="0" step="1" inputmode="decimal" aria-describedby="phone-error"><span class="field-error" id="phone-error" aria-live="polite"></span></div>
+                <div class="field"><label for="subscriptions">Abonnementer</label><input id="subscriptions" name="subscriptions" type="number" min="0" step="1" inputmode="decimal" aria-describedby="subscriptions-error"><span class="field-error" id="subscriptions-error" aria-live="polite"></span></div>
+                <div class="field"><label for="loans">Lån og kreditt</label><input id="loans" name="loans" type="number" min="0" step="1" inputmode="decimal" aria-describedby="loans-error"><span class="field-error" id="loans-error" aria-live="polite"></span></div>
+                <div class="field"><label for="saving">Sparing</label><input id="saving" name="saving" type="number" min="0" step="1" inputmode="decimal" aria-describedby="saving-error"><span class="field-error" id="saving-error" aria-live="polite"></span></div>
+                <div class="field"><label for="other">Annet</label><input id="other" name="other" type="number" min="0" step="1" inputmode="decimal" aria-describedby="other-error"><span class="field-error" id="other-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn budsjett</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="buffer" aria-labelledby="buffer-title">
+            <h2 id="buffer-title">Bufferkalkulator</h2>
+            <form id="buffer-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="fixed">Månedlige faste utgifter</label><input id="fixed" name="fixed" type="number" min="0" step="1" inputmode="decimal" aria-describedby="fixed-error"><span class="field-error" id="fixed-error" aria-live="polite"></span></div>
+                <div class="field"><label for="months">Ønsket antall måneder med buffer</label><input id="months" name="months" type="number" min="1" step="1" inputmode="numeric" aria-describedby="months-error"><span class="field-error" id="months-error" aria-live="polite"></span></div>
+                <div class="field"><label for="existing">Eksisterende buffer</label><input id="existing" name="existing" type="number" min="0" step="1" inputmode="decimal" aria-describedby="existing-error"><span class="field-error" id="existing-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn buffer</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="strom" aria-labelledby="strom-title">
+            <h2 id="strom-title">Strømkostnadskalkulator</h2>
+            <form id="electricity-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="kwh">Forbruk i kWh per måned</label><input id="kwh" name="kwh" type="number" min="0" step="1" inputmode="decimal" aria-describedby="kwh-error"><span class="field-error" id="kwh-error" aria-live="polite"></span></div>
+                <div class="field"><label for="price">Strømpris i øre/kWh</label><input id="price" name="price" type="number" min="0" step="0.01" inputmode="decimal" aria-describedby="price-error"><span class="field-error" id="price-error" aria-live="polite"></span></div>
+                <div class="field"><label for="grid">Nettleie per måned</label><input id="grid" name="grid" type="number" min="0" step="1" inputmode="decimal" aria-describedby="grid-error"><span class="field-error" id="grid-error" aria-live="polite"></span></div>
+                <div class="field"><label for="fixedFee">Fastbeløp per måned</label><input id="fixedFee" name="fixedFee" type="number" min="0" step="1" inputmode="decimal" aria-describedby="fixedFee-error"><span class="field-error" id="fixedFee-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn strøm</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="rente" aria-labelledby="rente-title">
+            <h2 id="rente-title">Rentekostnadskalkulator</h2>
+            <form id="interest-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="principal">Lånebeløp</label><input id="principal" name="principal" type="number" min="0" step="1" inputmode="decimal" aria-describedby="principal-error"><span class="field-error" id="principal-error" aria-live="polite"></span></div>
+                <div class="field"><label for="rate">Nominell rente i prosent</label><input id="rate" name="rate" type="number" min="0" step="0.01" inputmode="decimal" aria-describedby="rate-error"><span class="field-error" id="rate-error" aria-live="polite"></span></div>
+                <div class="field"><label for="years">Nedbetalingstid i år</label><input id="years" name="years" type="number" min="1" step="1" inputmode="numeric" aria-describedby="years-error"><span class="field-error" id="years-error" aria-live="polite"></span></div>
+                <div class="field"><label for="fee">Termingebyr per måned</label><input id="fee" name="fee" type="number" min="0" step="1" inputmode="decimal" aria-describedby="fee-error"><span class="field-error" id="fee-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn rente</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="abonnement" aria-labelledby="abonnement-title">
+            <h2 id="abonnement-title">Abonnementskalkulator</h2>
+            <form id="subscription-form" novalidate>
+              <div data-subscription-rows>
+                <div class="subscription-row" data-subscription-row>
+                  <div class="field"><label for="subscription-name-1">Navn på abonnement</label><input id="subscription-name-1" name="subscriptionName" type="text" autocomplete="off"></div>
+                  <div class="field"><label for="subscription-price-1">Pris per måned</label><input id="subscription-price-1" name="subscriptionPrice" type="number" min="0" step="1" inputmode="decimal" aria-describedby="subscription-price-error-1"><span class="field-error" id="subscription-price-error-1" aria-live="polite"></span></div>
+                  <button class="secondary-button remove-row" type="button" data-remove-subscription>Fjern</button>
+                </div>
+                <div class="subscription-row" data-subscription-row>
+                  <div class="field"><label for="subscription-name-2">Navn på abonnement</label><input id="subscription-name-2" name="subscriptionName" type="text" autocomplete="off"></div>
+                  <div class="field"><label for="subscription-price-2">Pris per måned</label><input id="subscription-price-2" name="subscriptionPrice" type="number" min="0" step="1" inputmode="decimal" aria-describedby="subscription-price-error-2"><span class="field-error" id="subscription-price-error-2" aria-live="polite"></span></div>
+                  <button class="secondary-button remove-row" type="button" data-remove-subscription>Fjern</button>
+                </div>
+                <div class="subscription-row" data-subscription-row>
+                  <div class="field"><label for="subscription-name-3">Navn på abonnement</label><input id="subscription-name-3" name="subscriptionName" type="text" autocomplete="off"></div>
+                  <div class="field"><label for="subscription-price-3">Pris per måned</label><input id="subscription-price-3" name="subscriptionPrice" type="number" min="0" step="1" inputmode="decimal" aria-describedby="subscription-price-error-3"><span class="field-error" id="subscription-price-error-3" aria-live="polite"></span></div>
+                  <button class="secondary-button remove-row" type="button" data-remove-subscription>Fjern</button>
+                </div>
+              </div>
+              <div class="button-row"><button class="secondary-button" type="button" data-add-subscription>Legg til abonnement</button><button class="button" type="submit">Beregn abonnementer</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="forsikringsbehov" aria-labelledby="forsikringsbehov-title">
+            <h2 id="forsikringsbehov-title">Forsikringsbehov-kalkulator</h2>
+            <p>Dette er en generell oversikt, ikke en anbefaling.</p>
+            <form id="insurance-needs-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="age">Alder</label><input id="age" name="age" type="number" min="0" max="120" step="1" inputmode="numeric" aria-describedby="age-error"><span class="field-error" id="age-error" aria-live="polite"></span></div>
+                <div class="field"><label for="home">Har bolig?</label><select id="home" name="home"><option value="nei">Nei</option><option value="ja">Ja</option></select></div>
+                <div class="field"><label for="housingType">Eier eller leier bolig?</label><select id="housingType" name="housingType"><option value="leier">Leier</option><option value="eier">Eier</option></select></div>
+                <div class="field"><label for="car">Har bil?</label><select id="car" name="car"><option value="nei">Nei</option><option value="ja">Ja</option></select></div>
+                <div class="field"><label for="children">Har barn?</label><select id="children" name="children"><option value="nei">Nei</option><option value="ja">Ja</option></select></div>
+                <div class="field"><label for="partner">Har samboer/ektefelle?</label><select id="partner" name="partner"><option value="nei">Nei</option><option value="ja">Ja</option></select></div>
+                <div class="field"><label for="pet">Har kjæledyr?</label><select id="pet" name="pet"><option value="nei">Nei</option><option value="ja">Ja</option></select></div>
+                <div class="field"><label for="highDebt">Har høy gjeld?</label><select id="highDebt" name="highDebt"><option value="nei">Nei</option><option value="ja">Ja</option></select></div>
+                <div class="field"><label for="travel">Reiser du flere ganger i året?</label><select id="travel" name="travel"><option value="nei">Nei</option><option value="ja">Ja</option></select></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Vis generell oversikt</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="egenandel" aria-labelledby="egenandel-title">
+            <h2 id="egenandel-title">Egenandel-kalkulator</h2>
+            <form id="deductible-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="damage">Skadebeløp</label><input id="damage" name="damage" type="number" min="0" step="1" inputmode="decimal" aria-describedby="damage-error"><span class="field-error" id="damage-error" aria-live="polite"></span></div>
+                <div class="field"><label for="deductible">Egenandel</label><input id="deductible" name="deductible" type="number" min="0" step="1" inputmode="decimal" aria-describedby="deductible-error"><span class="field-error" id="deductible-error" aria-live="polite"></span></div>
+                <div class="field"><label for="bonusLoss">Mulig bonustap eller økt premie</label><input id="bonusLoss" name="bonusLoss" type="number" min="0" step="1" inputmode="decimal" aria-describedby="bonusLoss-error"><span class="field-error" id="bonusLoss-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn egenandel</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="bilkostnad" aria-labelledby="bilkostnad-title">
+            <h2 id="bilkostnad-title">Bilkostnadskalkulator</h2>
+            <form id="car-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="car-loan">Lån eller leasing per måned</label><input id="car-loan" name="loan" type="number" min="0" step="1" inputmode="decimal" aria-describedby="car-loan-error"><span class="field-error" id="car-loan-error" aria-live="polite"></span></div>
+                <div class="field"><label for="fuel">Drivstoff eller strøm per måned</label><input id="fuel" name="fuel" type="number" min="0" step="1" inputmode="decimal" aria-describedby="fuel-error"><span class="field-error" id="fuel-error" aria-live="polite"></span></div>
+                <div class="field"><label for="car-insurance">Forsikring per måned</label><input id="car-insurance" name="insurance" type="number" min="0" step="1" inputmode="decimal" aria-describedby="car-insurance-error"><span class="field-error" id="car-insurance-error" aria-live="polite"></span></div>
+                <div class="field"><label for="service">Service og vedlikehold per måned</label><input id="service" name="service" type="number" min="0" step="1" inputmode="decimal" aria-describedby="service-error"><span class="field-error" id="service-error" aria-live="polite"></span></div>
+                <div class="field"><label for="toll">Bom og parkering per måned</label><input id="toll" name="toll" type="number" min="0" step="1" inputmode="decimal" aria-describedby="toll-error"><span class="field-error" id="toll-error" aria-live="polite"></span></div>
+                <div class="field"><label for="tires">Dekk og utstyr per måned</label><input id="tires" name="tires" type="number" min="0" step="1" inputmode="decimal" aria-describedby="tires-error"><span class="field-error" id="tires-error" aria-live="polite"></span></div>
+                <div class="field"><label for="depreciation">Verdifall per måned</label><input id="depreciation" name="depreciation" type="number" min="0" step="1" inputmode="decimal" aria-describedby="depreciation-error"><span class="field-error" id="depreciation-error" aria-live="polite"></span></div>
+                <div class="field"><label for="car-other">Andre kostnader</label><input id="car-other" name="other" type="number" min="0" step="1" inputmode="decimal" aria-describedby="car-other-error"><span class="field-error" id="car-other-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn bilkostnad</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="matbudsjett" aria-labelledby="matbudsjett-title">
+            <h2 id="matbudsjett-title">Matbudsjett-kalkulator</h2>
+            <form id="food-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="adults">Antall voksne</label><input id="adults" name="adults" type="number" min="0" step="1" inputmode="numeric" aria-describedby="adults-error"><span class="field-error" id="adults-error" aria-live="polite"></span></div>
+                <div class="field"><label for="food-children">Antall barn</label><input id="food-children" name="children" type="number" min="0" step="1" inputmode="numeric" aria-describedby="food-children-error"><span class="field-error" id="food-children-error" aria-live="polite"></span></div>
+                <div class="field"><label for="adultCost">Estimert matkostnad per voksen per måned</label><input id="adultCost" name="adultCost" type="number" min="0" step="1" inputmode="decimal" aria-describedby="adultCost-error"><span class="field-error" id="adultCost-error" aria-live="polite"></span></div>
+                <div class="field"><label for="childCost">Estimert matkostnad per barn per måned</label><input id="childCost" name="childCost" type="number" min="0" step="1" inputmode="decimal" aria-describedby="childCost-error"><span class="field-error" id="childCost-error" aria-live="polite"></span></div>
+                <div class="field"><label for="takeaway">Restaurant/takeaway per måned</label><input id="takeaway" name="takeaway" type="number" min="0" step="1" inputmode="decimal" aria-describedby="takeaway-error"><span class="field-error" id="takeaway-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn matbudsjett</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="calculator" id="feriebudsjett" aria-labelledby="feriebudsjett-title">
+            <h2 id="feriebudsjett-title">Feriebudsjett-kalkulator</h2>
+            <form id="holiday-form" novalidate>
+              <div class="calculator-grid">
+                <div class="field"><label for="holiday-transport">Transport</label><input id="holiday-transport" name="transport" type="number" min="0" step="1" inputmode="decimal" aria-describedby="holiday-transport-error"><span class="field-error" id="holiday-transport-error" aria-live="polite"></span></div>
+                <div class="field"><label for="lodging">Overnatting</label><input id="lodging" name="lodging" type="number" min="0" step="1" inputmode="decimal" aria-describedby="lodging-error"><span class="field-error" id="lodging-error" aria-live="polite"></span></div>
+                <div class="field"><label for="holiday-food">Mat</label><input id="holiday-food" name="food" type="number" min="0" step="1" inputmode="decimal" aria-describedby="holiday-food-error"><span class="field-error" id="holiday-food-error" aria-live="polite"></span></div>
+                <div class="field"><label for="activities">Aktiviteter</label><input id="activities" name="activities" type="number" min="0" step="1" inputmode="decimal" aria-describedby="activities-error"><span class="field-error" id="activities-error" aria-live="polite"></span></div>
+                <div class="field"><label for="holiday-insurance">Reiseforsikring/ekstra forsikring</label><input id="holiday-insurance" name="insurance" type="number" min="0" step="1" inputmode="decimal" aria-describedby="holiday-insurance-error"><span class="field-error" id="holiday-insurance-error" aria-live="polite"></span></div>
+                <div class="field"><label for="shopping">Shopping/annet</label><input id="shopping" name="shopping" type="number" min="0" step="1" inputmode="decimal" aria-describedby="shopping-error"><span class="field-error" id="shopping-error" aria-live="polite"></span></div>
+                <div class="field"><label for="people">Antall personer</label><input id="people" name="people" type="number" min="1" step="1" inputmode="numeric" aria-describedby="people-error"><span class="field-error" id="people-error" aria-live="polite"></span></div>
+                <div class="field"><label for="holiday-months">Måneder til reisen</label><input id="holiday-months" name="months" type="number" min="1" step="1" inputmode="numeric" aria-describedby="holiday-months-error"><span class="field-error" id="holiday-months-error" aria-live="polite"></span></div>
+              </div>
+              <div class="button-row"><button class="button" type="submit">Beregn feriebudsjett</button><button class="secondary-button" type="button" data-reset>Nullstill</button><button class="secondary-button" type="button" data-copy-result>Kopier resultat</button></div>
+              <div class="result-box" data-result aria-live="polite"><p>Fyll ut feltene og trykk beregn for å se resultatet.</p></div>
+            </form>
+            <p class="disclaimer">Informasjonen på Hverdagsøkonomi er generell og forenklet. Den er ikke personlig økonomisk, juridisk eller forsikringsfaglig rådgivning. Sjekk alltid priser, vilkår og dekning hos aktuell leverandør før du tar en beslutning.</p>
+          </section>
+
+          <section class="article-block" aria-labelledby="calculator-faq">
+            <h2 id="calculator-faq">FAQ om kalkulatorene</h2>
+            <div class="faq">
+              <details><summary>Er kalkulatorene gratis?</summary><p>Ja, kalkulatorene er gratis å bruke.</p></details>
+              <details><summary>Lagres tallene jeg skriver inn?</summary><p>Nei. Beregningene skjer lokalt i nettleseren, og tallene sendes ikke til en server.</p></details>
+              <details><summary>Er dette personlig rådgivning?</summary><p>Nei. Resultatene er generelle og forenklede estimater.</p></details>
+              <details><summary>Hvor nøyaktige er kalkulatorene?</summary><p>De gir en forenklet beregning basert på tallene du legger inn. Faktiske priser, gebyrer og vilkår kan avvike.</p></details>
+              <details><summary>Kan jeg bruke kalkulatorene anonymt?</summary><p>Ja. Du trenger ikke konto eller innlogging.</p></details>
+            </div>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <nav class="toc calculator-nav" aria-label="Kalkulatoroversikt">
+            <h2>På denne siden</h2>
+            <ul>
+              <li><a href="#budsjett">Budsjett</a></li>
+              <li><a href="#buffer">Buffer</a></li>
+              <li><a href="#strom">Strøm</a></li>
+              <li><a href="#rente">Rente</a></li>
+              <li><a href="#abonnement">Abonnement</a></li>
+              <li><a href="#forsikringsbehov">Forsikringsbehov</a></li>
+              <li><a href="#egenandel">Egenandel</a></li>
+              <li><a href="#bilkostnad">Bilkostnad</a></li>
+              <li><a href="#matbudsjett">Matbudsjett</a></li>
+              <li><a href="#feriebudsjett">Feriebudsjett</a></li>
+            </ul>
+          </nav>
+          <div class="ad-placeholder" aria-label="Annonseplass">Annonseplass</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="ad-placeholder" aria-label="Annonseplass">Annonseplass</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><h2>Hverdagsøkonomi</h2><p>Smarte valg for pengene dine.</p><p>Informasjonen på Hverdagsøkonomi er generell og forenklet.</p></div>
+      <nav aria-label="Bunnmeny"><ul class="footer-links"><li><a href="personvern.html">Personvern</a></li><li><a href="cookies.html">Cookies</a></li><li><a href="affiliate.html">Affiliate</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="sitemap.xml">Sitemap</a></li></ul></nav>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/calculators.js" defer></script>
+  <script src="assets/js/cookie-consent.js" defer></script>
+</body>
+</html>
