@@ -386,6 +386,28 @@ button.secondary-button {
   box-shadow: var(--shadow-soft);
 }
 
+.card-action {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: var(--color-brand);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.card-link:hover .card-action {
+  color: var(--color-accent-strong);
+}
+
+.home-notes {
+  margin-top: 1.5rem;
+}
+
+.home-notes > * {
+  height: 100%;
+}
+
 .pill-list {
   display: flex;
   flex-wrap: wrap;
